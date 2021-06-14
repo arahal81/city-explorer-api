@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const data = require('./data/weather.json');
-const PORT = process.env.PORT_API || 3010;
+const PORT = 3010;
 const C_array=['AMMAN','PARIS','SEATTLE'];
 app.use(cors());
 //
