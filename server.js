@@ -21,4 +21,4 @@ class Forecast {
   }
 }
 
-app.listen(PORT, console.log(PORT));
+app.listen(PORT);
