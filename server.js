@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+require("dotenv").config(); 
 const data = require('./data/weather.json');
-const port = 3020;
+const PORT =  process.env.PORT||8080;
 const C_array=['AMMAN','PARIS','SEATTLE'];
 app.use(cors());
 //
@@ -20,4 +21,4 @@ class Forecast {
   }
 }
 
-app.listen(port);
+app.listen(PORT);
