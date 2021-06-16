@@ -44,7 +44,12 @@ function movieApi(req,res) {
             const moviearray = item.data.results.map(item=>{
             return new MoviesList(item);
             })
-        res.send(moviearray);
+            if (moviearray.length !== 0) {
+              res.send(moviearray);
+            }else{
+              res.status(500).send('sorry, there is no data for the city you search for it');
+            }
+        
         })
         .catch(err =>{
             //res.send(`there is an error in getting the data => ${err}`);
